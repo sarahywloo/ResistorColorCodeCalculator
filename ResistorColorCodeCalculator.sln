@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResistorColorCodeCalculator", "ResistorColorCodeCalculator\ResistorColorCodeCalculator.csproj", "{1CE2C8B1-CC7D-454B-BCB7-D532B280D3D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResistorColorCodeCalculator.Tests", "ResistorColorCodeCalculator.Tests\ResistorColorCodeCalculator.Tests.csproj", "{E1A95FB3-7E9A-4FFA-A53B-B565116FF1D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResistorColorCodeCalculator.Logic", "ResistorColorCodeCalculator.Logic\ResistorColorCodeCalculator.Logic.csproj", "{AB8C5587-425B-4EED-BA23-0B9D2B3AFCBB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1CE2C8B1-CC7D-454B-BCB7-D532B280D3D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CE2C8B1-CC7D-454B-BCB7-D532B280D3D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CE2C8B1-CC7D-454B-BCB7-D532B280D3D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CE2C8B1-CC7D-454B-BCB7-D532B280D3D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1A95FB3-7E9A-4FFA-A53B-B565116FF1D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1A95FB3-7E9A-4FFA-A53B-B565116FF1D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1A95FB3-7E9A-4FFA-A53B-B565116FF1D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1A95FB3-7E9A-4FFA-A53B-B565116FF1D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB8C5587-425B-4EED-BA23-0B9D2B3AFCBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB8C5587-425B-4EED-BA23-0B9D2B3AFCBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB8C5587-425B-4EED-BA23-0B9D2B3AFCBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB8C5587-425B-4EED-BA23-0B9D2B3AFCBB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

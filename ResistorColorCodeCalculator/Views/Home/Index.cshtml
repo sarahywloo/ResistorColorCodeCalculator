@@ -1,0 +1,97 @@
+﻿@model ResistorColorCodeCalculator.Models.CalculatorViewModel
+
+@{
+    Layout = null;
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Resistor Calculator</title>
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-offset-1">
+            <img src="https://www.tu-eshop.com/image/data/eshop-6-1.jpg" alt="4-Band Resistor" />
+        </div>
+    </div>
+
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post)) {
+        <div class="row">
+            <div class="col-md-offset-1 col-md-2">
+                <div class="dropdown">
+                    @Html.LabelFor(m => m.BandAColors, new { @class = "control-label" })
+                    @Html.DropDownListFor(m => m.SelectedBandAColor, new SelectList(Model.BandAColors))
+                    @*<select class="dropdown-toggle" ></select>*@
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-offset-1 col-md-2">
+                <div class="dropdown">
+                    @Html.LabelFor(m => m.BandBColors, new { @class = "control-label" })
+                    @Html.DropDownListFor(m => m.SelectedBandBColor, new SelectList(Model.BandBColors))
+                    @*<select class="dropdown-toggle"></select>*@
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-offset-1 col-md-2">
+                <div class="dropdown">
+                    @Html.LabelFor(m => m.BandCColors, new { @class = "control-label" })
+                    @Html.DropDownListFor(m => m.SelectedBandCColor, new SelectList(Model.BandCColors))
+                    @*<select class="dropdown-toggle"></select>*@
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-offset-1 col-md-2">
+                <div class="dropdown">
+                    @Html.LabelFor(m => m.BandDColors, new { @class = "control-label" })
+                    @Html.DropDownListFor(m => m.SelectedBandDColor, new SelectList(Model.BandDColors))
+                    @*<select class="dropdown-toggle"></select>*@
+                </div>
+            </div>
+        </div>
+        <br />
+
+        <div class="row">
+            <div class="col-md-offset-1">
+                <button type="submit">Submit</button>
+            </div>
+        </div>
+            <br />
+
+    }
+
+    @if (Model.Result.HasValue || Model.Tolerance.HasValue) {
+        <div class="row">
+            <div class="col-md-offset-1 col-md-2">
+                <p>Band A Color: <em>@Model.SelectedBandAColor</em></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-offset-1 col-md-2">
+                <p>Band B Color: <em>@Model.SelectedBandBColor</em></p>
+            </div>
+        </div>
+            <div class="row">
+                <div class="col-md-offset-1 col-md-2">
+                    <p>Band C Color: <em>@Model.SelectedBandCColor</em></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-offset-1 col-md-2">
+                    <p>Band D Color: <em>@Model.SelectedBandDColor</em></p>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-offset-1">
+                    <p>The resistance is: <strong>@Model.Result ohms ± @Model.Tolerance %</strong></p>
+                </div>
+            </div>
+    }
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+C:\projects\ResistorColorCodeCalculator\ResistorColorCodeCalculator.Logic\bin\Debug\ResistorColorCodeCalculator.Logic.dll
+C:\projects\ResistorColorCodeCalculator\ResistorColorCodeCalculator.Logic\bin\Debug\ResistorColorCodeCalculator.Logic.pdb
+C:\projects\ResistorColorCodeCalculator\ResistorColorCodeCalculator.Logic\obj\Debug\ResistorColorCodeCalculator.Logic.csprojResolveAssemblyReference.cache
+C:\projects\ResistorColorCodeCalculator\ResistorColorCodeCalculator.Logic\obj\Debug\ResistorColorCodeCalculator.Logic.dll
+C:\projects\ResistorColorCodeCalculator\ResistorColorCodeCalculator.Logic\obj\Debug\ResistorColorCodeCalculator.Logic.pdb
