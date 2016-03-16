@@ -69,7 +69,7 @@ namespace ResistorColorCodeCalculator.Logic {
         }
 
 
-    public int CalculatorOhmValue(string bandAColor, string bandBColor, string bandCColor, string bandDColor) {
+    public decimal CalculatorOhmValue(string bandAColor, string bandBColor, string bandCColor, string bandDColor) {
 
         if (!ValidInput(bandAColor, bandBColor, bandCColor, bandDColor)) {
 
@@ -82,7 +82,7 @@ namespace ResistorColorCodeCalculator.Logic {
 
             var result = int.Parse(aCol.Value + bCol.Value) * decimal.Parse(cCol.Value);
 
-            return (int)result;
+            return result;
 
     }
 

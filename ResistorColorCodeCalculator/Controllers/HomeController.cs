@@ -25,15 +25,21 @@ namespace ResistorColorCodeCalculator.Controllers {
         [HttpPost]
         public ActionResult Index(CalculatorViewModel vm) {
 
-            var calculateOhm = new Calculator();
-            vm.Result = calculateOhm.CalculatorOhmValue(vm.SelectedBandAColor, vm.SelectedBandBColor, vm.SelectedBandCColor, vm.SelectedBandDColor);
-
-            vm.Tolerance = calculateOhm.GetTolerance(vm.SelectedBandDColor);
 
             vm.BandAColors = new List<string> { "Brown", "Red", "Orange", "Yellow", "Green", "Blue", "Violet", "Gray", "White" };
             vm.BandBColors = new List<string> { "Black", "Brown", "Red", "Orange", "Yellow", "Green", "Blue", "Violet", "Gray", "White" };
             vm.BandCColors = new List<string> { "Black", "Brown", "Red", "Orange", "Yellow", "Green", "Blue", "Violet", "Gray", "White", "Gold", "Silver" };
             vm.BandDColors = new List<string> { "Brown", "Red", "Yellow", "Green", "Blue", "Violet", "Gray", "Gold", "Silver", "None" };
+
+            if (!ModelState.IsValid) {
+                return View(vm);
+            }
+
+            var calculateOhm = new Calculator();
+            vm.Result = calculateOhm.CalculatorOhmValue(vm.SelectedBandAColor, vm.SelectedBandBColor, vm.SelectedBandCColor, vm.SelectedBandDColor);
+
+            vm.Tolerance = calculateOhm.GetTolerance(vm.SelectedBandDColor);
+
 
             return View(vm);
         }

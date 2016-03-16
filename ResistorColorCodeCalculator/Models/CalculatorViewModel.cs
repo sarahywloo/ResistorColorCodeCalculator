@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -16,12 +17,16 @@ namespace ResistorColorCodeCalculator.Models {
         [DisplayName("Select Band D Color")]
         public List<string> BandDColors { get; set; }
 
+        [Required]
         public string SelectedBandAColor { get; set; }
+        [Required]
         public string SelectedBandBColor { get; set; }
+        [Required]
         public string SelectedBandCColor { get; set; }
+        [Required]
         public string SelectedBandDColor { get; set; }
 
-        public int? Result { get; set; }
+        public decimal? Result { get; set; }
         public decimal? Tolerance { get; set; }
     }
 }
