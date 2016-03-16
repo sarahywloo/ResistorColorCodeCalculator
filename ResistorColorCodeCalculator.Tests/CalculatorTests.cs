@@ -60,18 +60,29 @@ namespace ResistorColorCodeCalculator.Tests {
             //Act
             var result = calculateOhm.CalculatorOhmValue("Yellow", "Violet", "Red", "Gold");
             //Assert
-            Assert.AreEqual(4700, result);
+            Assert.AreEqual(4700m, result);
         }
 
         [TestMethod]
+        //Test for large values
         public void TestCalculatorOhmValue2() {
             //Arrange
             var calculateOhm = new Calculator();
             //Act
-            var result = calculateOhm.CalculatorOhmValue("Blue", "Gray", "Black", "Gold");
+            var result = calculateOhm.CalculatorOhmValue("Blue", "Green", "White", "None");
             //Assert
-            Assert.AreEqual(68, result);
+            Assert.AreEqual(65000000000m, result);
         }
 
+        [TestMethod]
+        //Test for small values
+        public void TestCalculatorOhmValue3() {
+            //Arrange
+            var calculateOhm = new Calculator();
+            //Act
+            var result = calculateOhm.CalculatorOhmValue("Violet", "Brown", "Gold", "Brown");
+            //Assert
+            Assert.AreEqual(7.1m, result);
+        }
     }
 }

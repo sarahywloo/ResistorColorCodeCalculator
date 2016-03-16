@@ -90,6 +90,7 @@ namespace ResistorColorCodeCalculator.Logic {
             return BandAList.ContainsKey(bandAColor) && BandBList.ContainsKey(bandBColor) && BandCList.ContainsKey(bandCColor) && BandDList.ContainsKey(bandDColor);
         }
         
+        //Tolerance is separated from the resistor 'value' calculation because it represents a range
         public decimal GetTolerance (string bandDColor) {
 
             var dCol = BandDList[bandDColor];
